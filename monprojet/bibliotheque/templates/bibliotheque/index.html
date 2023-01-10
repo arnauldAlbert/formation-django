@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>liste</title>
+</head>
+<body>
+    <h1> ma bibliotheque </h1>
+    <a href="/bibliotheque/ajout/"> ajouter un auteur</a>
+    <ul>
+    {% for l in liste %}
+        <li> {{l.nom }}  <a href="/bibliotheque/affiche/{{l.id}}/"> affiche </a> <a href="/bibliotheque/delete/{{l.id}}/"> delete </a>
+            <a href="/bibliotheque/update/{{l.id}}/"> update </a></li>
+     {% endfor %}
+    </ul>
+</body>
+</html>
